@@ -1,0 +1,404 @@
+Last login: Tue May 13 11:10:00 on console
+mac27781:~ apple$  cd Documents/
+mac27781:Documents apple$ mfdir dummy_project
+-bash: mfdir: command not found
+mac27781:Documents apple$ mkdir dummy_project
+mac27781:Documents apple$ cd dummy_projects
+-bash: cd: dummy_projects: No such file or directory
+mac27781:Documents apple$ ls
+Adobe
+Adobe Flash Builder 4.6
+Final Cut Pro Documents
+KINETIC PLAN.psd
+Microsoft User Data
+Processing
+Soundtrack Pro Documents
+Terminal Saved Output
+Title Design.ai
+Untitled-1.pdf
+aggressive stereotype.docx
+compassionatedorset-recipes-bake2013-1.png
+compassionatedorset-recipes-bake2013-1.psd
+dummy_project
+maya
+mac27781:Documents apple$ cd dummy_projects
+-bash: cd: dummy_projects: No such file or directory
+mac27781:Documents apple$ cd dummy_project
+mac27781:dummy_project apple$ pwd
+/Users/apple/Documents/dummy_project
+mac27781:dummy_project apple$ git init
+Initialized empty Git repository in /Users/apple/Documents/dummy_project/.git/
+mac27781:dummy_project apple$ ls.git
+-bash: ls.git: command not found
+mac27781:dummy_project apple$ ls .git
+HEAD		config		hooks		objects
+branches	description	info		refs
+mac27781:dummy_project apple$ git config --global user.name"Davis Tang"
+error: invalid key: user.nameDavis Tang
+mac27781:dummy_project apple$ git --global user.name "Davis"
+Unknown option: --global
+usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [-c name=value] [--help]
+           <command> [<args>]
+mac27781:dummy_project apple$ git config user.email "davis-tang@hotmail.com"
+mac27781:dummy_project apple$ git config --global user.email "davis-tang@hotmail.com"
+mac27781:dummy_project apple$ git config --global user.name "davis"
+mac27781:dummy_project apple$ ls
+mac27781:dummy_project apple$ ls =a
+ls: =a: No such file or directory
+mac27781:dummy_project apple$ ls -a
+.	..	.git
+mac27781:dummy_project apple$ touch index.html
+mac27781:dummy_project apple$ ls -a
+.		..		.git		index.html
+mac27781:dummy_project apple$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	index.html
+nothing added to commit but untracked files present (use "git add" to track)
+mac27781:dummy_project apple$ git add index.html
+mac27781:dummy_project apple$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   index.html
+#
+mac27781:dummy_project apple$ git commit -m "initial commit, added index.html as dummy file"
+[master (root-commit) b9f5c4d] initial commit, added index.html as dummy file
+ 0 files changed
+ create mode 100644 index.html
+mac27781:dummy_project apple$ git status
+# On branch master
+nothing to commit (working directory clean)
+mac27781:dummy_project apple$ git log
+commit b9f5c4dac0665357998b3c2afd48eda0193623eb
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:33:47 2014 +0100
+
+    initial commit, added index.html as dummy file
+mac27781:dummy_project apple$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+	status
+	stage
+	stash
+mac27781:dummy_project apple$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   index.html
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+mac27781:dummy_project apple$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   index.html
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+mac27781:dummy_project apple$ git commit -am "added basic html skeleton to index.html"
+[master a859c9d] added basic html skeleton to index.html
+ 1 file changed, 17 insertions(+)
+mac27781:dummy_project apple$ git status
+# On branch master
+nothing to commit (working directory clean)
+mac27781:dummy_project apple$ git log
+commit a859c9d58d850cf9d7ac3423d9acc9e18a8bfd00
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:46:09 2014 +0100
+
+    added basic html skeleton to index.html
+
+commit b9f5c4dac0665357998b3c2afd48eda0193623eb
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:33:47 2014 +0100
+
+    initial commit, added index.html as dummy file
+mac27781:dummy_project apple$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   index.html
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+mac27781:dummy_project apple$ git commit -am "typed h1 on index.html"
+[master ffd782d] typed h1 on index.html
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+mac27781:dummy_project apple$ git log
+commit ffd782d40f024db7cbd6286d57ea630be28193e2
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:52:08 2014 +0100
+
+    typed h1 on index.html
+
+commit a859c9d58d850cf9d7ac3423d9acc9e18a8bfd00
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:46:09 2014 +0100
+
+    added basic html skeleton to index.html
+
+commit b9f5c4dac0665357998b3c2afd48eda0193623eb
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:33:47 2014 +0100
+
+    initial commit, added index.html as dummy file
+mac27781:dummy_project apple$ git status
+# On branch master
+nothing to commit (working directory clean)
+mac27781:dummy_project apple$ git commit -am "typed some content on index.html"
+[master 1f80c01] typed some content on index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+mac27781:dummy_project apple$ git log
+commit 1f80c015b313b07e4f883a292bddc9496df16cb6
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:53:07 2014 +0100
+
+    typed some content on index.html
+
+commit ffd782d40f024db7cbd6286d57ea630be28193e2
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:52:08 2014 +0100
+
+    typed h1 on index.html
+
+commit a859c9d58d850cf9d7ac3423d9acc9e18a8bfd00
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:46:09 2014 +0100
+
+    added basic html skeleton to index.html
+
+commit b9f5c4dac0665357998b3c2afd48eda0193623eb
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:33:47 2014 +0100
+
+    initial commit, added index.html as dummy file
+...skipping...
+commit 1f80c015b313b07e4f883a292bddc9496df16cb6
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:53:07 2014 +0100
+
+    typed some content on index.html
+
+commit ffd782d40f024db7cbd6286d57ea630be28193e2
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:52:08 2014 +0100
+
+    typed h1 on index.html
+
+commit a859c9d58d850cf9d7ac3423d9acc9e18a8bfd00
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:46:09 2014 +0100
+
+    added basic html skeleton to index.html
+
+commit b9f5c4dac0665357998b3c2afd48eda0193623eb
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:33:47 2014 +0100
+
+    initial commit, added index.html as dummy file
+mac27781:dummy_project apple$ git status
+# On branch master
+nothing to commit (working directory clean)
+mac27781:dummy_project apple$ git commit -am"del blablabla in content"
+[master fb70d95] del blablabla in content
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+mac27781:dummy_project apple$ git log
+commit fb70d950349309a012db0a8637c9041af551c47b
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:57:07 2014 +0100
+
+    del blablabla in content
+
+commit 1f80c015b313b07e4f883a292bddc9496df16cb6
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:53:07 2014 +0100
+
+    typed some content on index.html
+
+commit ffd782d40f024db7cbd6286d57ea630be28193e2
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:52:08 2014 +0100
+
+    typed h1 on index.html
+
+commit a859c9d58d850cf9d7ac3423d9acc9e18a8bfd00
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:46:09 2014 +0100
+
+    added basic html skeleton to index.html
+mac27781:dummy_project apple$ git log --oneline
+fb70d95 del blablabla in content
+1f80c01 typed some content on index.html
+ffd782d typed h1 on index.html
+a859c9d added basic html skeleton to index.html
+b9f5c4d initial commit, added index.html as dummy file
+mac27781:dummy_project apple$ git status
+# On branch master
+nothing to commit (working directory clean)
+mac27781:dummy_project apple$ git remote add origin https://github.com/captainjukes/space_invaders.git
+mac27781:dummy_project apple$ git push -u origin master
+Username for 'https://github.com': captainjukes 
+Password for 'https://captainjukes@github.com': 
+Counting objects: 15, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (15/15), 1.23 KiB, done.
+Total 15 (delta 3), reused 0 (delta 0)
+To https://github.com/captainjukes/space_invaders.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+mac27781:dummy_project apple$ 
+mac27781:dummy_project apple$ mkdir js
+mac27781:dummy_project apple$ cd js
+mac27781:js apple$ touch engine.js
+mac27781:js apple$ touch level.js
+mac27781:js apple$ touch game.js
+mac27781:js apple$ ls js
+ls: js: No such file or directory
+mac27781:js apple$ ls
+engine.js	game.js		level.js
+mac27781:js apple$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	./
+nothing added to commit but untracked files present (use "git add" to track)
+mac27781:js apple$ git commit -am"add 3 files to js file"
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	./
+nothing added to commit but untracked files present (use "git add" to track)
+mac27781:js apple$ git add engine.js
+mac27781:js apple$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   engine.js
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	game.js
+#	level.js
+mac27781:js apple$ git add game.js
+mac27781:js apple$ git add leve1.js
+fatal: pathspec 'js/leve1.js' did not match any files
+mac27781:js apple$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   engine.js
+#	new file:   game.js
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	level.js
+mac27781:js apple$ git add level.js
+mac27781:js apple$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   engine.js
+#	new file:   game.js
+#	new file:   level.js
+#
+mac27781:js apple$ git remote add origin https://github.com/captainjukes/space_invaders.git
+fatal: remote origin already exists.
+mac27781:js apple$ git push -u origin master
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+mac27781:js apple$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   engine.js
+#	new file:   game.js
+#	new file:   level.js
+#
+mac27781:js apple$ git log
+commit fb70d950349309a012db0a8637c9041af551c47b
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:57:07 2014 +0100
+
+    del blablabla in content
+
+commit 1f80c015b313b07e4f883a292bddc9496df16cb6
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:53:07 2014 +0100
+
+    typed some content on index.html
+
+commit ffd782d40f024db7cbd6286d57ea630be28193e2
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:52:08 2014 +0100
+
+    typed h1 on index.html
+
+commit a859c9d58d850cf9d7ac3423d9acc9e18a8bfd00
+Author: davis <davis-tang@hotmail.com>
+Date:   Tue May 13 11:46:09 2014 +0100
+
+    added basic html skeleton to index.html
+mac27781:js apple$ git commit -am"added 3 js files"
+[master 40366f3] added 3 js files
+ 0 files changed
+ create mode 100644 js/engine.js
+ create mode 100644 js/game.js
+ create mode 100644 js/level.js
+mac27781:js apple$ git remote add origin https://github.com/captainjukes/space_invaders.git
+fatal: remote origin already exists.
+mac27781:js apple$ git push -u origin master
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 333 bytes, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/captainjukes/space_invaders.git
+   fb70d95..40366f3  master -> master
+Branch master set up to track remote branch master from origin.
+mac27781:js apple$ cd
+mac27781:~ apple$ mkdir homegit
+mac27781:~ apple$ cd homegit
+mac27781:homegit apple$ ls
+mac27781:homegit apple$ git clone https://github.com/captainjukes/space_invaders.git
+Cloning into 'space_invaders'...
+remote: Counting objects: 18, done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 18 (delta 3), reused 18 (delta 3)
+Unpacking objects: 100% (18/18), done.
+mac27781:homegit apple$ ls
+space_invaders
+mac27781:homegit apple$ cd ls
+-bash: cd: ls: No such file or directory
+mac27781:homegit apple$ ls
+space_invaders
+mac27781:homegit apple$ pwd homegit
+/Users/apple/homegit
+mac27781:homegit apple$ touch code.txt
+mac27781:homegit apple$ 
